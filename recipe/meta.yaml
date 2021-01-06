@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e7452f52c48bbef831af11e5faecdf16447e79d39d3685e85277dcaf63401dfc
+  url: https://www.dropbox.com/s/l2oem2wuucb18ys/polyscope-0.1.4.tar.gz\?dl\=1
+  sha256: 172a9fe3e97bcfa083a2a3f0325226e34d849c41dfd2c2f85dcd0fa08cf0a761
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv --install-option="--exclude-arch"
 
 requirements:
