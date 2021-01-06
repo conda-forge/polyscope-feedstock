@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://test-files.pythonhosted.org/packages/30/ba/d41286fdb65ea785d2c2e93de9b04793d8e7b8fc9f2c88520c035aa43850/polyscope-0.1.4.tar.gz
-  sha256: 172a9fe3e97bcfa083a2a3f0325226e34d849c41dfd2c2f85dcd0fa08cf0a761
+  url: https://test-files.pythonhosted.org/packages/78/ac/f79ba97f1db9a17de0a79c412ae3b3e30d015c2880eb1e9f36613a14bc61/polyscope-0.1.5.tar.gz
+  sha256: 66884f0d474ecb3764ac8d2cc8130eab25a95a83f471b414aa7c7ace05bde11e
 
 build:
   number: 1
