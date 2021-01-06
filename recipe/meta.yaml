@@ -1,16 +1,16 @@
 {% set name = "polyscope" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://test-files.pythonhosted.org/packages/78/ac/f79ba97f1db9a17de0a79c412ae3b3e30d015c2880eb1e9f36613a14bc61/polyscope-0.1.5.tar.gz
-  sha256: 66884f0d474ecb3764ac8d2cc8130eab25a95a83f471b414aa7c7ace05bde11e
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: dc94f06e97ed929dfba00f92248af15ad8b15512a76b61b319b54074cead66da
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv --install-option="--exclude-arch"
 
 requirements:
