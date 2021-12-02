@@ -1,5 +1,5 @@
 {% set name = "polyscope" %}
-{% set version = "1.2.0" %}
+{% set version = "1.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f2071ecff08b66e094df8d12fc4fc3d671f307aac7086c749c3e7746f7428084
+  sha256: 63cd6583da984d817407417a4c3f4075de094a9f712b39a6a7caf24fa16b5659
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv --install-option="--exclude-arch"
 
 requirements:
