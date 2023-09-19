@@ -29,7 +29,7 @@ requirements:
     - {{ cdt('libxext') }}  # [linux]
   host:
     - python
-    - pip
+    - pip <23
     - xorg-libxfixes  # [linux]
     - xorg-libx11  # [linux]
     - xorg-libxrandr  # [linux]
