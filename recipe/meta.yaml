@@ -10,8 +10,10 @@ source:
   sha256: 91538862845c737676011b7a21f2b7a6a6f34a7b92ca5d9747aa193b676ed0ca
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv --install-option="--exclude-arch"
+  number: 2
+  script:
+    - {{ PYTHON }} setup.py bdist_wheel --exclude-arch
+    - {{ PYTHON }} -m pip install -f dist polyscope=={{ version }}
 
 requirements:
   build:
@@ -29,7 +31,7 @@ requirements:
     - {{ cdt('libxext') }}  # [linux]
   host:
     - python
-    - pip <23
+    - pip
     - xorg-libxfixes  # [linux]
     - xorg-libx11  # [linux]
     - xorg-libxrandr  # [linux]
