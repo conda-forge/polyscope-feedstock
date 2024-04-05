@@ -10,7 +10,7 @@ source:
   sha256: 4ed6d92b44a11d2146cd67248343c314d9fe2792c316273643b1194b0d86f9f5
 
 build:
-  number: 0
+  number: 1
   script:
     - {{ PYTHON }} setup.py bdist_wheel --exclude-arch
     - {{ PYTHON }} -m pip install -f dist polyscope=={{ version }}
