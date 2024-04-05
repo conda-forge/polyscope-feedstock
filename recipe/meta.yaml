@@ -1,5 +1,5 @@
 {% set name = "polyscope" %}
-{% set version = "2.1.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4ed6d92b44a11d2146cd67248343c314d9fe2792c316273643b1194b0d86f9f5
+  sha256: b01f0b76cdec3e6728e16e273b07d4630a3073bba41e9fdd3721d569a1417b7e
 
 build:
-  number: 1
+  number: 0
   script:
     - {{ PYTHON }} setup.py bdist_wheel --exclude-arch
     - {{ PYTHON }} -m pip install -f dist polyscope=={{ version }}
