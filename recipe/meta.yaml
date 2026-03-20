@@ -22,11 +22,12 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - cmake
+    - cmake <4
     - make
   host:
     - python
     - pip
+    - setuptools
     - xorg-libxfixes  # [linux]
     - xorg-libx11  # [linux]
     - xorg-libxrandr  # [linux]
