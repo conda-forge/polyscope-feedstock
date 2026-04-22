@@ -1,13 +1,13 @@
 {% set name = "polyscope" %}
-{% set version = "2.3.0" %}
+{% set version = "2.6.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41f2f4f02c1feb14475e8293c257690cf2f2f64ac2683ef7b8844dfabd9f44a0
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: f7806a951f8a16376adc431300e48f856808ee80ab5cb7597db055cbc3b6ab21
 
 build:
   number: 0
@@ -22,23 +22,19 @@ requirements:
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
-    - cmake
+    - cmake <4
     - make
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux]
-    - {{ cdt('libxext') }}  # [linux]
   host:
     - python
     - pip
+    - setuptools
     - xorg-libxfixes  # [linux]
     - xorg-libx11  # [linux]
     - xorg-libxrandr  # [linux]
     - xorg-libxinerama  # [linux]
     - xorg-libxcursor  # [linux]
     - xorg-libxi  # [linux]
+    - libgl-devel                    # [linux]
   run:
     - python
     - numpy
