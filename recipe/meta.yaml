@@ -1,13 +1,13 @@
 {% set name = "polyscope" %}
-{% set version = "2.3.0" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 41f2f4f02c1feb14475e8293c257690cf2f2f64ac2683ef7b8844dfabd9f44a0
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 3a97e57297b231a9fc93a98c4f9eab852819d79f0807ce64071cdc9dabd53868
 
 build:
   number: 0
